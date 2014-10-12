@@ -28,7 +28,7 @@ Available states
 ``jboss-fuse``
 --------------
 
-Downloads the JBoss Fuse zip file from jboss_fuse:source_url (either pillar or grain), and installs the package.
+Downloads the JBoss Fuse zip distribution from jboss_fuse:source_url (either pillar or grain), and installs the package.
 
 
 ``jboss-fuse.service``
@@ -36,6 +36,6 @@ Downloads the JBoss Fuse zip file from jboss_fuse:source_url (either pillar or g
 
 Installs JBoss Fuse as an automatic startup service.
 
-Downloads the JBoss Fuse zip file from jboss_fuse:source_url (either pillar or grain), and installs the package.
+Downloads the JBoss Fuse zip distribution from jboss_fuse:source_url (either pillar or grain), and installs the package.
 
 Tested on Ubuntu LTS 12.04.
