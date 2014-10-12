@@ -17,6 +17,7 @@
 {%- set startup_profile   = g.get('package', p.get('package', 'full')) %}
 {%- set default_url       = 'salt://' + version_name + '.zip' %}
 {%- set source_url        = g.get('source_url', p.get('source_url', default_url)) %}
+{%- set source_hash       = g.get('source_hash', p.get('source_hash', None)) %}
 # bind_address is only supported as a grain, because it has to be host-specific
 {%- set bind_address      = gc.get('bind_address', '0.0.0.0') %}
 
@@ -36,17 +37,18 @@
 {%- set jvm_opts          = gc.get('jvm_opts', pc.get('jvm_opts', None)) %}  
 
 {%- set jb = {} %}
-{%- do jb.update( { 'version' : version,
-                    'build' : build,
-                    'package' : package,
+{%- do jb.update( { 'version': version,
+                    'build': build,
+                    'package': package,
                     'version_name': version_name,
                     'startup_profile': startup_profile,
-                    'user' : user,
-                    'home' : home,
-                    'prefix' : prefix,
-                    'install_path' : install_path,
+                    'user': user,
+                    'home': home,
+                    'prefix': prefix,
+                    'install_path': install_path,
                     'source_url': source_url,
-                    'java_home' : java_home,
+                    'source_hash': source_hash,
+                    'java_home': java_home,
                     'bind_address': bind_address,
                     'initial_heap_size': initial_heap_size,
                     'max_heap_size': max_heap_size,
