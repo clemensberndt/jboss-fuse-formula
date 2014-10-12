@@ -1,6 +1,6 @@
 {%- from 'jboss-fuse/settings.sls' import jb with context %}
 
-jboss-fuse:
+install-jboss-fuse:
   group.present:
     - name: {{ jb.user }}
   user.present:
@@ -25,7 +25,8 @@ jboss-fuse:
     - user: {{ jb.user }}
     - group: {{ jb.user }}
     - require:
-      - jboss-fuse 
+      - user: {{ jb.user }}
+      - group: {{ jb.user }}
     - recurse:
       - user
       - group
