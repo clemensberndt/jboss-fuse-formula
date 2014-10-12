@@ -11,6 +11,7 @@
 {%- set java_home    = salt['pillar.get']('java_home', '/usr/lib/java') %}
 
 {%- set version           = g.get('version', p.get('version', '6.1.0.GA')) %}
+{%- set build             = g.get('build', p.get('build', {})) %}
 {%- set package           = g.get('package', p.get('package', 'full')) %}
 {%- set version_name      = 'jboss-fuse-' + package + '-' + version %}
 {%- set startup_profile   = g.get('package', p.get('package', 'full')) %}
@@ -36,6 +37,7 @@
 
 {%- set jb = {} %}
 {%- do jb.update( { 'version' : version,
+                    'build' : build,
                     'package' : package,
                     'version_name': version_name,
                     'startup_profile': startup_profile,
