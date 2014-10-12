@@ -1,6 +1,6 @@
-=========+
+==========
 jboss-fuse
-=========+
+==========
 
 Formula to set up and configure a single-node JBoss Fuse server.
 
