@@ -14,7 +14,7 @@
 {%- set package           = g.get('package', p.get('package', 'full')) %}
 {%- set version_name      = 'jboss-fuse-' + package + '-' + version %}
 {%- set startup_profile   = g.get('package', p.get('package', 'full')) %}
-{%- set default_url       = 'salt://files/' + version_name + '.zip' %}
+{%- set default_url       = 'salt://' + version_name + '.zip' %}
 {%- set source_url        = g.get('source_url', p.get('source_url', default_url)) %}
 # bind_address is only supported as a grain, because it has to be host-specific
 {%- set bind_address      = gc.get('bind_address', '0.0.0.0') %}
