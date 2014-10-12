@@ -12,7 +12,9 @@ Formula to set up and configure a single-node JBoss Fuse server.
 Formula Dependencies
 ====================
 
-This formula requires a compatible JRE to be installed. The following salt formulas may be used for provisioning.
+This formula requires a compatible JRE to be installed.
+
+Standard system package management or the following salt formulas may be used for provisioning of a suitable Java runtime.
 
 * sun-java
 * java
@@ -24,7 +26,15 @@ Available states
     :local:
 
 ``jboss-fuse``
--------------
+--------------
+
+Downloads the JBoss Fuse zip file from jboss_fuse:source_url (either pillar or grain), and installs the package.
+
+
+``jboss-fuse.service``
+----------------------
+
+Installs JBoss Fuse as an automatic startup service.
 
 Downloads the JBoss Fuse zip file from jboss_fuse:source_url (either pillar or grain), and installs the package.
 
