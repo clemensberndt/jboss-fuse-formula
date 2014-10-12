@@ -4,7 +4,8 @@
 {% set gc = g.get('config', {}) %}
 
 # these are global - hence pillar-only
-{%- set user         = p.get('user', 'jboss-fuse') %}
+{%- set user         = p.get('user', 'jboss') %}
+{%- set service      = p.get('service', 'jboss-fuse') %}
 {%- set home         = p.get('home', 'jboss-fuse') %}
 {%- set prefix       = p.get('prefix', '/srv') %}
 {%- set install_path = prefix + '/' + home %}
@@ -44,6 +45,7 @@
                     'startup_profile': startup_profile,
                     'user': user,
                     'home': home,
+                    'service': service,
                     'prefix': prefix,
                     'install_path': install_path,
                     'source_url': source_url,

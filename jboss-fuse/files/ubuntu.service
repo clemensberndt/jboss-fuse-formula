@@ -87,7 +87,7 @@ restart() {
 }
 
 checkstatusofproc(){
-  pidofproc -p $PIDFILE $PROC_NAME > /dev/null
+    su -s /bin/bash $SVC_USER -c "$EXEC_PATH/status" > /dev/null
 }
 
 checkstatus(){
