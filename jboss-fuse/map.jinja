@@ -1,0 +1,7 @@
+{% set jboss_fuse_map = salt['grains.filter_by']({
+    'Ubuntu': {
+      'service_script': '/etc/init.d/jboss-fuse',
+      'service_script_source': 'jboss_fuse.init.d.ubuntu',
+      'service_script_mode': '755',
+    }
+}, merge=salt['pillar.get']('jboss_fuse:lookup')) %}

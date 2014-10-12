@@ -1,0 +1,15 @@
+jboss_fuse:
+  source_url: salt://files/jboss-fuse-full-6.1.0-SNAPSHOT.zip
+  source_hash: sha256=ddf452b490c77ea3dd7f14e9a0bbaecd1a2c30a7827cc5e846423ffe69df3b5d
+  version: 6.1.0.GA
+  package: full
+  startup_profile: jboss-fuse-full
+  user: jboss
+  service: jboss-fuse
+  config:
+    max_perm_size: 128
+    max_heap_size: 2048
+    initial_heap_size: 256
+    jvm_opts: None
+
+# Refer to jboss-fuse/settings.sls for additional pillar configuration options
